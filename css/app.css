@@ -11,9 +11,15 @@
 nav {
     font-family: "Raleway ExtraLight", sans-serif;
 }
+video{
+    padding-top: 16px;
+}
 .sidenav{
     color: black;
     font-family: "Raleway ", sans-serif;
+}
+label{
+    font-size: 22px;
 }
 .wrapper{
     display: flex;
