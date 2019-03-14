@@ -1,5 +1,41 @@
-body, html {
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+nav {
     font-family: "Raleway ExtraLight", sans-serif;
+}
+.sidenav{
+    color: black;
+    font-family: "Raleway ", sans-serif;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    height: 200px !important;
+    width: 200px !important;
+    margin: 16px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    /*margin-top: -1px;*/
+    /*padding: 16px;*/
+    padding-left: 16px;
+    background-color: #1976d2;
+    color: white;
+}
+span{
+    font-size: 28px;
 }
