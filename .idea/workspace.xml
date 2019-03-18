@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6f9ca3b-4b35-4aaf-90f3-0f226d42210e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/practice-quiz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/practice-quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/practice-quiz.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="practice-quiz.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/practice-quiz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+            <state relative-caret-position="4160">
+              <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -159,7 +156,7 @@
       <workItem from="1552622274561" duration="39000" />
       <workItem from="1552855877292" duration="659000" />
       <workItem from="1552862123447" duration="778000" />
-      <workItem from="1552922659031" duration="1196000" />
+      <workItem from="1552922659031" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="base design creatd">
       <created>1552524722035</created>
@@ -172,7 +169,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17650000" />
+    <option name="totallyTimeSpent" value="17867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -373,8 +370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/practice-quiz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+        <state relative-caret-position="4160">
+          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
         </state>
       </provider>
     </entry>
