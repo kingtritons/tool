@@ -37,6 +37,9 @@ label{
     flex-flow: row wrap;
     justify-content: center;
 }
+.list{
+    margin: 16px;
+}
 .quiz{
     display: flex;
     flex-direction: column;
