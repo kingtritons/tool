@@ -7,7 +7,13 @@
     vertical-align: baseline;
     background: transparent;
 }
-
+.video-container
+{
+    display: flex !important;
+    justify-content: center !important;
+    width: 80% !important;
+    margin: 16px !important;
+}
 
 body {
     display: flex;
@@ -36,6 +42,7 @@ label{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    /*align-items: center;*/
 }
 .list{
     margin: 16px;
@@ -46,7 +53,14 @@ label{
 }
 .choices{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+}
+#start
+{
+    cursor: pointer;
+    z-index: 1;
+    /*text-decoration: none;*/
+    /*color: white;*/
 }
 .card{
     height: 200px !important;
@@ -55,6 +69,21 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.button
+{
+    position: absolute;
+    background-color: #1976d2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 nav{
