@@ -49,6 +49,11 @@ main {
 nav {
     font-family: "Raleway ExtraLight", sans-serif;
 }
+.about-header
+{
+    font-family: "Raleway ExtraLight", sans-serif;
+
+}
 video{
     padding-top: 16px;
 }
@@ -77,6 +82,30 @@ label{
     display: flex;
     flex-flow: column wrap;
 }
+.start-here
+{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    margin: 0 auto;
+    top: 50%;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    color: #f1f1f1;
+    z-index: 1;
+    /*width: 100%;*/
+    padding: 20px;
+}
+.main-header
+{
+    position: fixed;
+    top: 20%;
+    left: 33%;
+}
+#myVideo
+{
+    filter: brightness(30%);
+}
+
 #start
 {
     cursor: pointer;
@@ -95,7 +124,10 @@ label{
 .button
 {
     position: absolute;
-    background-color: #1976d2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00c853;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -106,6 +138,35 @@ label{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
+}
+.content-container
+{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content
+{
+    width: 80%;
+}
+h5
+{
+    padding: 8px;
+}
+.references
+{
+    width: 80% !important;
+}
+.video
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .button-submit
