@@ -7,12 +7,31 @@
     vertical-align: baseline;
     background: transparent;
 }
+.video-interface
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+.collection
+{
+    /*flex-grow: 0;*/
+}
 .video-container
 {
     display: flex !important;
-    justify-content: center !important;
-    width: 80% !important;
-    margin: 16px !important;
+    justify-content: space-between !important;
+    /*flex-grow: 1;*/
+    width: 60% !important;
+    height: 480px !important;
+    margin: 0 auto !important;
+}
+a
+{
+    color: inherit !important;
+}
+iframe
+{
+    margin: 16px;
 }
 
 body {
@@ -23,6 +42,8 @@ body {
 
 main {
     flex: 1 0 auto;
+    width: 100%;
+    display: flex;
 }
 
 nav {
@@ -40,8 +61,8 @@ label{
 }
 .wrapper{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row wrap !important;
+    /*justify-content: flex-start;*/
     /*align-items: center;*/
 }
 .list{
@@ -49,7 +70,8 @@ label{
 }
 .quiz{
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    width: 50%;
 }
 .choices{
     display: flex;
@@ -73,6 +95,21 @@ label{
 .button
 {
     position: absolute;
+    background-color: #1976d2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.button-submit
+{
     background-color: #1976d2;
     border: none;
     color: white;
