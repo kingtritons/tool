@@ -346,7 +346,7 @@ $(document).ready(function () {
     //     console.log(randNum);
     // }
 
-    $("#submit-answers").click(function(){
+    $("#submit-answers1").click(function(){
         let answers = $("form.mult").serializeArray();
         $(".preloader-wrapper").show();
         setTimeout(function () {
@@ -355,10 +355,43 @@ $(document).ready(function () {
         // $('.modal').modal('open');
         setTimeout(function() {
             $('.modal').modal('open')}, 500);
-        $('#submit-answers').prop('disabled', true);
-        checkAnswers(answers);
+        $('#submit-answers1').prop('disabled', true);
+        checkAnswers1(answers);
     });
-    function checkAnswers(data)
+    function checkAnswers1(data)
+    {
+        for (let i = 0; quiz1.length; i++)
+        {
+            if(quiz1[i].answer === data[i].value)
+            {
+                count++;
+                console.log("correct");
+            }
+            else
+            {
+                $(".collection").append(`<li class="collection-item hoverable">` + quiz1[i].answerText + `</li>`);
+                console.log(quiz1[i].answerText);
+            }
+        }
+        if (count === quiz1.length)
+        {
+
+        }
+    }
+
+    $("#submit-answers2").click(function(){
+        let answers = $("form.mult").serializeArray();
+        $(".preloader-wrapper").show();
+        setTimeout(function () {
+            $(".preloader-wrapper").hide();
+        },400);
+        // $('.modal').modal('open');
+        setTimeout(function() {
+            $('.modal').modal('open')}, 500);
+        $('#submit-answers2').prop('disabled', true);
+        checkAnswers2(answers);
+    });
+    function checkAnswers2(data)
     {
         for (let i = 0; quiz1.length; i++)
         {

@@ -2,9 +2,426 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Minerva | Practice Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
+<!-- TODO:
+1 - Add Dr. Als' video to site
+2 - Fix CSS issues on videos page
+3 - Figure out how to properly randomize questions or ditch entirely.
+4 - Maybe convert to angular if time permits
+5 - Add documentation to the site
+6 - Put HTML in javascript to loop though dynamically-->
+<header>
+    <nav class="blue darken-3">
+        <div class="nav-wrapper">
+            <a href="../index.html" class="brand-logo">Minerva</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="video01.html">Videos</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="video01.html">Videos</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="video-interface">
+    <div>
+        <ul class="collection">
+            <a href="video01.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Intro & Designing Counters</span>
+                    <p><br>
+                        27:51
+                    </p>
+                </li>
+            </a>
+            <a href="video02.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - JK Flip Flops</span>
+                    <p><br>
+                        35:12
+                    </p>
+                </li>
+            </a>
+            <a href="video03.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - D Flip Flops</span>
+                    <p><br>
+                        32:55
+                    </p>
+                </li>
+            </a>
+            <a href="video04.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - T Flip Flops</span>
+                    <p><br>
+                        31:07
+                    </p>
+                </li>
+            </a>
+            <a href="video05.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - JK Flip Flops(Live Demo)</span>
+                    <p><br>
+                        28:42
+                    </p>
+                </li>
+            </a>
+            <a href="video06.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - JK Flip Flops(Live Demo) Part 2</span>
+                    <p><br>
+                        28:42
+                    </p>
+                </li>
+            </a>
+            <a href="video07.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - D Flip Flops(Live Demo)</span>
+                    <p><br>
+                        30:14
+                    </p>
+                </li>
+            </a>
+            <a href="video08.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Synchronous Counters - T Flip Flops(Live Demo)</span>
+                    <p><br>
+                        30:59
+                    </p>
+                </li>
+            </a>
+            <a href="video09.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle green">play_arrow</i>
+                    <span class="title">Sequential Circuits,Flip Flops & Navigation</span>
+                    <p> 21:39<br>
+                        By Dr. Adrian Als
+                    </p>
+                </li>
+            </a>
+            <a href="quiz1.html">
+                <li class="collection-item avatar hoverable">
+                    <i class="material-icons circle yellow">grade</i>
+                    <span class="title">Quiz 1</span>
+                    <p>9 Questions<br>
+                    </p>
+                </li>
+            </a>
+            <a href="quiz2.html">
+                <li class="collection-item avatar active hoverable">
+                    <i class="material-icons circle yellow">grade</i>
+                    <span class="title">Quiz 2</span>
+                    <p>9 Questions<br>
+                    </p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <form action="#" id="mulChoice" class="mult">
+            <div class="quiz">
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>1)What is a counter?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q1" type="radio" value='A' class="with-gap"/>
+                            <span>A program used to test computer performance.</span>
+                        </label>
+                        <label>
+                            <input name="q1" type="radio" value='B' class="with-gap"/>
+                            <span>A device used to store the number of occurrences of a particular event.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q1" value='C' type="radio"/>
+                            <span>A device used to perform calculations.</span>
+                        </label>
 
+                        <label>
+                            <input name="q1" type="radio" value='D' class="with-gap"/>
+                            <span>A circuit that changes code to signals.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>2)What is the difference between a synchronous and asynchronous counter? </p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q2" type="radio" value='A' class="with-gap"/>
+                            <span>Inputs.</span>
+                        </label>
+                        <label>
+                            <input name="q2" type="radio" value='B' class="with-gap"/>
+                            <span>Clock Speed.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q2" value='C' type="radio"/>
+                            <span>Clock Signals.</span>
+                        </label>
+
+                        <label>
+                            <input name="q2" type="radio" value='D' class="with-gap"/>
+                            <span>A and C.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>3)What are synchronous counters made of?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q3" type="radio" value='A' class="with-gap"/>
+                            <span>Flip Flops and Logic Gates.</span>
+                        </label>
+                        <label>
+                            <input name="q3" type="radio" value='B' class="with-gap"/>
+                            <span>Flip Flops only.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q3" value='C' type="radio"/>
+                            <span>Multiplexers and Decoders.</span>
+                        </label>
+
+                        <label>
+                            <input name="q3" type="radio" value='D' class="with-gap"/>
+                            <span>None of the above.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>4)What is a logic gate?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q4" type="radio" value='A' class="with-gap"/>
+                            <span>A type of memory.</span>
+                        </label>
+                        <label>
+                            <input name="q4" type="radio" value='B' class="with-gap"/>
+                            <span>A part of the ALU.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q4" value='C' type="radio"/>
+                            <span>A device which interprets machine language.</span>
+                        </label>
+
+                        <label>
+                            <input name="q4" type="radio" value='D' class="with-gap"/>
+                            <span>A switch which implements boolean logic.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>5)A flip flip is also knows as a:</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q5" type="radio" value='A' class="with-gap"/>
+                            <span>Bi-stable circuit</span>
+                        </label>
+                        <label>
+                            <input name="q5" type="radio" value='B' class="with-gap"/>
+                            <span>Latch</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q5" value='C' type="radio"/>
+                            <span>Parallel circuit</span>
+                        </label>
+                        <label>
+                            <input name="q5" type="radio" value='D' class="with-gap"/>
+                            <span>Tri-stable circuit</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>6)Which is not a type of flip flop?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q6" type="radio" value='A' class="with-gap"/>
+                            <span>JK.</span>
+                        </label>
+                        <label>
+                            <input name="q6" type="radio" value='B' class="with-gap"/>
+                            <span>D.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q6" value='C' type="radio"/>
+                            <span>T.</span>
+                        </label>
+
+                        <label>
+                            <input name="q6" type="radio" value='D' class="with-gap"/>
+                            <span>Z.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>7)How many bits would be required when representing a sequence which has the largest value of 7?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q7" type="radio" value='A' class="with-gap"/>
+                            <span>7.</span>
+                        </label>
+                        <label>
+                            <input name="q7" type="radio" value='B' class="with-gap"/>
+                            <span>128.</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q7" value='C' type="radio"/>
+                            <span>14.</span>
+                        </label>
+
+                        <label>
+                            <input name="q7" type="radio" value='D' class="with-gap"/>
+                            <span>3.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>8)What value does a clock have at the rising edge?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q8" type="radio" value='A' class="with-gap"/>
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input name="q8" type="radio" value='B' class="with-gap"/>
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q8" value='C' type="radio"/>
+                            <span>0</span>
+                        </label>
+
+                        <label>
+                            <input name="q8" type="radio" value='D' class="with-gap"/>
+                            <span>4</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="list">
+                    <!--<div class="questions">-->
+                    <p>9)What is the binary representation of the sequence: 3, 1, 0, 2?</p>
+                    <!--</div>-->
+                    <div class="choices">
+                        <label>
+                            <input name="q9" type="radio" value='A' class="with-gap"/>
+                            <span>11, 10, 00, 01</span>
+                        </label>
+                        <label>
+                            <input name="q9" type="radio" value='B' class="with-gap"/>
+                            <span>10, 11, 00, 01</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="q9" value='C' type="radio"/>
+                            <span>11, 01, 00, 10</span>
+                        </label>
+
+                        <label>
+                            <input name="q9" type="radio" value='D' class="with-gap"/>
+                            <span>01, 11, 10, 00</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button data-target="modal2" type="button" id="submit-answers2" class="button-submit">Submit Answers</button>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Results</h4>
+            <ul class="collection with-header">
+
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <footer class="page-footer blue darken-3">
+        <!--<div class="container">-->
+        <!--<div class="row">-->
+        <!--<div class="col l6 s12">-->
+        <!--<h5 class="white-text">Footer Content</h5>-->
+        <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer-->
+        <!--content.</p>-->
+        <!--</div>-->
+        <!--<div class="col l4 offset-l2 s12">-->
+        <!--<h5 class="white-text">Links</h5>-->
+        <!--<ul>-->
+        <!--<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>-->
+        <!--<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>-->
+        <!--<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>-->
+        <!--<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2019 Minerva
+            </div>
+        </div>
+    </footer>
+</footer>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../js/materialize.min.js"></script>
+
+<script src="../js/app.js"></script>
 </body>
 </html>
