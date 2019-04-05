@@ -59,7 +59,7 @@ video{
 }
 .sidenav{
     color: black;
-    font-family: "Raleway ", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 label{
     font-size: 22px;
@@ -76,7 +76,7 @@ label{
 .quiz{
     display: flex;
     flex-flow: column wrap;
-    width: 50%;
+    width: 80%;
 }
 .choices{
     display: flex;

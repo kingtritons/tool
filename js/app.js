@@ -328,7 +328,6 @@ $(document).ready(function () {
                 answerText: "1"
             }
         ];
-
     // let randNumTracker = [];
     // for (let i = 0; i < 10; i++)
     // {
@@ -345,7 +344,6 @@ $(document).ready(function () {
     //
     //     console.log(randNum);
     // }
-
     $("#submit-answers1").click(function(){
         let answers = $("form.mult").serializeArray();
         $(".preloader-wrapper").show();
@@ -354,7 +352,7 @@ $(document).ready(function () {
         },400);
         // $('.modal').modal('open');
         setTimeout(function() {
-            $('.modal').modal('open')}, 500);
+            $('.modal1').modal('open')}, 500);
         $('#submit-answers1').prop('disabled', true);
         checkAnswers1(answers);
     });
@@ -387,26 +385,24 @@ $(document).ready(function () {
         },400);
         // $('.modal').modal('open');
         setTimeout(function() {
-            $('.modal').modal('open')}, 500);
+            $('.modal2').modal('open')}, 500);
         $('#submit-answers2').prop('disabled', true);
         checkAnswers2(answers);
     });
     function checkAnswers2(data)
     {
-        for (let i = 0; quiz1.length; i++)
+        for (let i = 0; quiz2.length; i++)
         {
-            if(quiz1[i].answer === data[i].value)
+            if(quiz2[i].answer === data[i].value)
             {
                 count++;
-                console.log("correct");
             }
             else
             {
-                $(".collection").append(`<li class="collection-item hoverable">` + quiz1[i].answerText + `</li>`);
-                console.log(quiz1[i].answerText);
+                $(".collection").append(`<li class="collection-item hoverable">` + quiz2[i].answerText + `</li>`);
             }
         }
-        if (count === quiz1.length)
+        if (count === quiz2.length)
         {
 
         }
