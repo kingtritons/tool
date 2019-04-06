@@ -163,6 +163,7 @@ $(document).ready(function () {
         [
             {
                 question: "What is a sequential circuit?",
+                number: "1",
                 A: "A type of computer.",
                 B: "A circuit whose output depends on the order or timing of the inputs.",
                 C: "A way of simplifying Boolean Algebra.",
@@ -172,6 +173,7 @@ $(document).ready(function () {
             },
             {
                 question: "What is a flip flop?",
+                number: "2",
                 A: "A circuit that has two stable states and can be used to store state information.",
                 B: "The internal fan of a computer.",
                 C: "Another name for a CPU",
@@ -181,6 +183,7 @@ $(document).ready(function () {
             },
             {
                 question: "Which flip flop mimics an exclusive OR in the characteristic table?",
+                number: "3",
                 A: "JK.",
                 B: "D",
                 C: "T",
@@ -190,6 +193,7 @@ $(document).ready(function () {
             },
             {
                 question: "Which Flip Flop has two inputs(excluding the clock)?",
+                number: "4",
                 A: "JK",
                 B: "D",
                 C: "T",
@@ -199,6 +203,7 @@ $(document).ready(function () {
             },
             {
                 question: "Which counters use a clock signal?",
+                number: "5",
                 A: "Asynchronous ",
                 B: "Synchronous",
                 C: "Both",
@@ -208,6 +213,7 @@ $(document).ready(function () {
             },
             {
                 question: "A 3 bit synchronous counter would use how many flip flops?",
+                number: "6",
                 A: "2",
                 B: "1",
                 C: "3",
@@ -217,6 +223,7 @@ $(document).ready(function () {
             },
             {
                 question: "A bidirectional counter has a sequence: 0, 3, 5, 4, 1, 2, 7, 6. How many flip flips does this counter have?",
+                number: "7",
                 A: "4",
                 B: "3",
                 C: "7",
@@ -226,6 +233,7 @@ $(document).ready(function () {
             },
             {
                 question: "A T flip flop has A`B + AB` as its input. What other logic gate could be used in replacement of the two AND gates and the OR gate?",
+                number: "8",
                 A: "NOR",
                 B: "XOR",
                 C: "NOT",
@@ -235,6 +243,7 @@ $(document).ready(function () {
             },
             {
                 question: "Which tables are needed to design any synchronous counter? (Assuming we want full marks)",
+                number: "9",
                 A: "Excitation Table",
                 B: "Excitation & Present-State, Next-State Tables",
                 C: "Characteristic & Present-State, Next-State Tables",
@@ -246,17 +255,10 @@ $(document).ready(function () {
 
     let quiz2 =
         [
-            {
-                question: "What is the binary representation of the sequence: 3, 1, 0, 2?",
-                A: "11, 10, 00, 01",
-                B: "10, 11, 00, 01",
-                C: "11, 01, 00, 10",
-                D: "01, 11, 10, 00",
-                answer: 'C',
-                answerText: "11, 01, 00, 10"
-            },
+
             {
                 question: "What is a counter?",
+                number: "1",
                 A: "A program used to test computer performance.",
                 B: "A device used to store the number of occurrences of a particular event.",
                 C: "A device used to perform calculations.",
@@ -266,6 +268,7 @@ $(document).ready(function () {
             },
             {
                 question: "What is the difference between a synchronous and asynchronous counter?",
+                number: "2",
                 A: "Inputs",
                 B: "Clock Speed",
                 C: "Clock Signals",
@@ -275,6 +278,7 @@ $(document).ready(function () {
             },
             {
                 question: "What are synchronous counters made of?",
+                number: "3",
                 A: "Flip Flops and logic gates.",
                 B: "Flip Flops only",
                 C: "Multiplexers and Decoders",
@@ -284,6 +288,7 @@ $(document).ready(function () {
             },
             {
                 question: "What is a logic gate?",
+                number: "4",
                 A: "A type of memory",
                 B: "A part of the ALU",
                 C: "A device which interprets machine language",
@@ -293,6 +298,7 @@ $(document).ready(function () {
             },
             {
                 question: "A Flip Flop is also known as a:",
+                number: "5",
                 A: "Bi-stable circuit",
                 B: "Latch",
                 C: "Parallel circuit",
@@ -302,6 +308,7 @@ $(document).ready(function () {
             },
             {
                 question: "Which is not a type of flip flop?",
+                number: "6",
                 A: "JK",
                 B: "D",
                 C: "T",
@@ -311,6 +318,7 @@ $(document).ready(function () {
             },
             {
                 question: "How many binary digits would be required when representing a sequence which has the largest value of 7?",
+                number: "7",
                 A: "7",
                 B: "128",
                 C: "14",
@@ -320,13 +328,24 @@ $(document).ready(function () {
             },
             {
                 question: "What value does a clock have at the rising edge?",
+                number: "8",
                 A: "2",
                 B: "1",
                 C: "0",
                 D: "4",
                 answer: 'B',
                 answerText: "1"
-            }
+            },
+            {
+                question: "What is the binary representation of the sequence: 3, 1, 0, 2?",
+                number: "9",
+                A: "11, 10, 00, 01",
+                B: "10, 11, 00, 01",
+                C: "11, 01, 00, 10",
+                D: "01, 11, 10, 00",
+                answer: 'C',
+                answerText: "11, 01, 00, 10"
+            },
         ];
     // let randNumTracker = [];
     // for (let i = 0; i < 10; i++)
@@ -346,6 +365,7 @@ $(document).ready(function () {
     // }
     $("#submit-answers1").click(function(){
         let answers = $("form.mult").serializeArray();
+        $('#submit-answers1').hide();
         $(".preloader-wrapper").show();
         setTimeout(function () {
             $(".preloader-wrapper").hide();
@@ -353,7 +373,6 @@ $(document).ready(function () {
         // $('.modal').modal('open');
         setTimeout(function() {
             $('.modal1').modal('open')}, 500);
-        $('#submit-answers1').prop('disabled', true);
         checkAnswers1(answers);
     });
     function checkAnswers1(data)
@@ -367,7 +386,7 @@ $(document).ready(function () {
             }
             else
             {
-                $(".collection").append(`<li class="collection-item hoverable">` + quiz1[i].answerText + `</li>`);
+                $(".collection").append(`<li class="collection-item hoverable">` + quiz1[i].number + ") " + quiz1[i].answerText + `</li>`);
                 console.log(quiz1[i].answerText);
             }
         }
@@ -379,6 +398,7 @@ $(document).ready(function () {
 
     $("#submit-answers2").click(function(){
         let answers = $("form.mult").serializeArray();
+        $('#submit-answers2').hide();
         $(".preloader-wrapper").show();
         setTimeout(function () {
             $(".preloader-wrapper").hide();
@@ -386,7 +406,6 @@ $(document).ready(function () {
         // $('.modal').modal('open');
         setTimeout(function() {
             $('.modal2').modal('open')}, 500);
-        $('#submit-answers2').prop('disabled', true);
         checkAnswers2(answers);
     });
     function checkAnswers2(data)
@@ -399,7 +418,7 @@ $(document).ready(function () {
             }
             else
             {
-                $(".collection").append(`<li class="collection-item hoverable">` + quiz2[i].answerText + `</li>`);
+                $(".collection").append(`<li class="collection-item hoverable">` + quiz2[i].number + ") " + quiz2[i].answerText + `</li>`);
             }
         }
         if (count === quiz2.length)
